@@ -94,7 +94,7 @@ Returns
 -------
 	None
 '''
-	link = open('./con_m_' + file_name + '_' + str(time.time()) + '.csv', 'w')
+	link = open('./Results/' + file_name + '_' + str(time.time()) + '.csv', 'w')
 	adc = ADC(Pin(pin))
 	if measure_time == 0:
 		while True:
