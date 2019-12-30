@@ -174,7 +174,7 @@ Returns
 -------
 	None
 '''
-	con = open('./lab.py', 'r')
+	con = open('./lab/__init__.py', 'r')
 	text = con.read()
 	con.close()
 	
