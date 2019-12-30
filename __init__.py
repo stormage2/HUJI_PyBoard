@@ -78,7 +78,7 @@ def start_continuous_measurement(measure_time = 0, measure_interval = 500, pin =
 	'''
 start_continuous_measurement(measure_time = 0, measure_interval = 500, pin = 'X1', file_name = '')
 
-Start a continuous measurement of the connected peripheral, and saves the result to a file on the PyBoards drive. Press Ctrl+C to stop the measuring at any time.
+Start a continuous measurement of the connected peripheral, and saves the result as to a CSV file on the PyBoards drive. Press Ctrl+C to stop the measuring at any time.
 
 Parameters
 ----------
@@ -89,12 +89,12 @@ measure_interval : int
 pin : str
 	Name of the pin connected to your connected peripheral. Defaults to X1.
 file_name : str
-	Not implemented yet.
+	Name for the saved file. Will be concatenated to the current CPU clock as file name to avoid possible duplicates and data loss.
 Returns
 -------
 	None
 '''
-	link = open('./con_m_' + str(time.time()) + '.csv', 'w')
+	link = open('./con_m_' + file_name + '_' + str(time.time()) + '.csv', 'w')
 	adc = ADC(Pin(pin))
 	if measure_time == 0:
 		while True:
