@@ -196,6 +196,6 @@ Returns
 		print(k)
 	except:
 		print('No function named', '\'' + func_name + '\'')
-		del text
-	
+		
 	del text
+	return
