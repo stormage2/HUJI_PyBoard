@@ -1,3 +1,8 @@
+G_DOC = '''
+HERE BE A GENERAL DOC
+'''
+
+
 from pyb import ADC, Pin, LED, delay
 from time import sleep
 import time
@@ -177,6 +182,9 @@ Returns
 	con = open('./lab/__init__.py', 'r')
 	text = con.read()
 	con.close()
+	
+	if func_name == '':
+		print(G_DOC)
 	
 	try:
 		k = text.split('def ' + func_name)[1]
