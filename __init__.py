@@ -185,6 +185,8 @@ Returns
 	
 	if func_name == '':
 		print(G_DOC)
+		del text
+		return
 	
 	try:
 		k = text.split('def ' + func_name)[1]
@@ -194,5 +196,6 @@ Returns
 		print(k)
 	except:
 		print('No function named', '\'' + func_name + '\'')
+		del text
 	
 	del text
