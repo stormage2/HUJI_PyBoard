@@ -1,5 +1,15 @@
 G_DOC = '''
-HERE BE A GENERAL DOC
+Welcome to the HUJI PyBoard package!
+
+Use help() for PyBoard built-in functions and keyboard shortcuts.
+
+The following functions are available under the lab package:
+	lab.what() - Get help about the lab functions or display this message.
+	lab.cls() - Clears the screen.
+	lab.move_stepper() - Control a stepper motor.
+	lab.start_continuous_measurement() - Collect data from a connected peripheral and it to a csv file.
+	lab.boolean_measurment() - Measure the current state of a connected peripheral.
+	lab.disco() - Start the onboard LEDs in a disco fashion.
 '''
 
 
@@ -83,7 +93,7 @@ def start_continuous_measurement(measure_time = 0, measure_interval = 500, pin =
 	'''
 start_continuous_measurement(measure_time = 0, measure_interval = 500, pin = 'X1', file_name = '')
 
-Start a continuous measurement of the connected peripheral, and saves the result as to a CSV file on the PyBoards drive. Press Ctrl+C to stop the measuring at any time.
+Start a continuous measurement of the connected peripheral, and saves the result as to a CSV file on the PyBoards drive, under the 'Results' folder. Press Ctrl+C to stop the measuring at any time.
 
 Parameters
 ----------
