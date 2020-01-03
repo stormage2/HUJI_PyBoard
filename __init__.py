@@ -7,7 +7,7 @@ The following functions are available under the lab package:
 	lab.what() - Get help about the lab functions or display this message.
 	lab.cls() - Clears the screen.
 	lab.move_stepper() - Control a stepper motor.
-	lab.start_continuous_measurement() - Collect data from a connected peripheral and it to a csv file.
+	lab.start_continuous_measurement() - Collect data from a connected peripheral and saves it to a csv file.
 	lab.boolean_measurment() - Measure the current state of a connected peripheral.
 	lab.disco() - Start the onboard LEDs in a disco fashion.
 '''
