@@ -134,7 +134,7 @@ Returns
 	link.close()
 	print('Measurment finished')
 	
-def boolean_measurment(pin = 'X1'):
+def boolean_measurment(pin = 'X1', threshold = 2730):
 	'''
 boolean_measurment(pin = 'X1')
 
@@ -142,12 +142,17 @@ Parameters
 ----------
 pin : str
 	Name of the pin connected to your connected peripheral. Defaults to X1.
+threshold : int
+	Sets the voltage threshold for returning 1 (==True). Defaults to 2730, which is 2/3 of the max voltage (4095).
 Returns
 -------
 int : Current value of selected pin.
 '''
-	device = Pin(pin, Pin.IN)
-	return device.value()
+	device = ADC(Pin(pin)).read()
+	if device > threshold:
+		return 1
+	else:
+		return 0
 	
 def disco():
 	'''
