@@ -136,7 +136,7 @@ Returns
 	
 def boolean_measurment(pin = 'X1', threshold = 2730):
 	'''
-boolean_measurment(pin = 'X1')
+boolean_measurment(pin = 'X1', threshold = 2730)
 
 Parameters
 ----------
